@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/formoms-app/', // ← Эта строка ОБЯЗАТЕЛЬНА
   plugins: [react()],
+  base: '/formoms-app/',
   server: {
     port: 5173,
     proxy: {
