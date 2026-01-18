@@ -1,11 +1,9 @@
-// frontend/vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/formoms-app/', // ← Эта строка ОБЯЗАТЕЛЬНА
   plugins: [react()],
-  base: '/formoms-app/',
+  base: '/tigrbn-formoms-ykt/', // ← ВАЖНО: должен совпадать с именем репозитория
   server: {
     port: 5173,
     proxy: {
