@@ -1,0 +1,119 @@
+/* Глобальные переменные для темы "Для Мам" */
+:root {
+  /* Цветовая палитра - пастельные тона */
+  --color-primary: #FFB6C1; /* Нежный розовый */
+  --color-primary-light: #FFE4E1; /* Светло-розовый */
+  --color-secondary: #87CEEB; /* Голубой */
+  --color-secondary-light: #E0F7FA; /* Светло-голубой */
+  --color-accent: #FFD700; /* Золотой акцент */
+  --color-success: #98FB98; /* Мятный */
+  --color-warning: #FFDAB9; /* Персиковый */
+  --color-danger: #FFCCCB; /* Коралловый */
+  
+  /* Нейтральные цвета */
+  --color-text: #5D4037; /* Тёплый коричневый */
+  --color-text-light: #8D6E63;
+  --color-background: #FFF9F9; /* Очень светло-розовый фон */
+  --color-card: #FFFFFF;
+  --color-border: #F8BBD0; /* Розовая граница */
+  
+  /* Тени и эффекты */
+  --shadow-soft: 0 4px 20px rgba(255, 182, 193, 0.15);
+  --shadow-medium: 0 8px 30px rgba(255, 182, 193, 0.2);
+  --shadow-hover: 0 12px 40px rgba(255, 182, 193, 0.3);
+  
+  /* Скругления */
+  --radius-small: 12px;
+  --radius-medium: 20px;
+  --radius-large: 30px;
+  --radius-circle: 50%;
+  
+  /* Анимации */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Шрифты */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-cursive: 'Brush Script MT', cursive;
+}
+
+/* Глобальные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.1) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+/* Плавная анимация для всех интерактивных элементов */
+button, a, input, textarea, select {
+  transition: var(--transition-fast);
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Общие классы */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Иконки (эмодзи) */
+.icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+/* Декоративные элементы */
+.heart-decoration {
+  color: var(--color-primary);
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
